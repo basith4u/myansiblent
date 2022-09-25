@@ -4,17 +4,6 @@
 172.31.2.107
 
 
-
-[myappwebservers]
-172.31.11.24
-172.31.2.10
-
-
-[mydbservers]
-172.31.11.240 
-172.31.2.110 
-
-
 [mywebservers:vars]
 var= value 
 mywebpackonubuntu=apache2
