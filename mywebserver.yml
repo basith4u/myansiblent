@@ -10,8 +10,9 @@
   - name: i want to start webserver on ubuntu nodes
     service: 
        name: apache2
-       state: restarted
+       state: started 
        
+
 
 
 
