@@ -6,15 +6,15 @@
     command: hostname -f 
     register: myresult
 
-  - name: i want to disply first task result 
+  - name: i want to disply first task result
     debug: 
        msg: "{{myresult}}"
 
-  - name: install git 
+  - name: install git
     apt: 
-      name: git 
+      name: git
       state: present
-    when: myresult.stderr ==""  
+    when: myresult.stderr =="" 
 
   - name: install tree
     apt:
