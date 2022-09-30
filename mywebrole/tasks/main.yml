@@ -3,5 +3,5 @@
 
 - name: install webserver
   apt:
-    name: webserver
+    name: apache2
     state: present
