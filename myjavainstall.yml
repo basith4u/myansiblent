@@ -1,11 +1,11 @@
 --- 
-- hosts: mywebservers 
-  become: yes 
+- hosts: mywebservers
+  become: yes
   tasks:
   - name: i want to install java on ubuntu
     apt:
       name: "{{myjavapackonubuntu}}"
-      state: present 
+      state: present
     when: ansible_os_family=="debian"
 
 
