@@ -16,7 +16,7 @@
 
   - name: i want to install webserver on RedHat nodes 
     yum: 
-       name: apache2 
+       name: httpd 
        state: present 
     when: ansible_os_family =="RedHat" 
 
