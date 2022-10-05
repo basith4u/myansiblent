@@ -1,12 +1,25 @@
---- 
+---
 - hosts: 172.31.29.208
   become: yes
-  tasks: 
+  tasks:
   - name: execute linux directly
-    command: hostname -f 
-    register: myresult 
+    command: hostname -f
+    register: myresult
 
-  - name: i want to display first task result 
-    debug: 
+  - name: i want to display first task result
+    debug:
        msg: "{{myresult}}"
+
+  - name: install git
+    apt:
+       name: git
+       state: present
+    when: myresult.stderr ==""   
+
+  - name: install tree
+    apt:
+       name: tree 
+       state: present
+    when: myresult.stderr !==""
+
 
